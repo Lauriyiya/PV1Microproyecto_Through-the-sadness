@@ -79,9 +79,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 2
+    wrapV: 2
+    wrapW: 2
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -485,7 +485,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1.4_0: -4865884503035749218
+      1.4_1: -2592713227871407796
+      1.4_10: -4954328236749556761
+      1.4_11: -6182009311964031092
+      1.4_12: 4351852278470171527
+      1.4_13: 158698339569646772
+      1.4_2: -8801799280251890254
+      1.4_3: -3778701532592514727
+      1.4_4: 3602468938648684784
+      1.4_5: -3185533451915352070
+      1.4_6: 7469386241822268956
+      1.4_7: -8620605068561270161
+      1.4_8: -7404998177897448665
+      1.4_9: 4468084274994881622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
