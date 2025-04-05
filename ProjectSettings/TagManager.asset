@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - OneWayPlatform
   - 
   - 
   - 
@@ -64,6 +64,15 @@ TagManager:
     locked: 0
   - name: Layer-7
     uniqueID: 1080364565
+    locked: 0
+  - name: Layer-8
+    uniqueID: 428290851
+    locked: 0
+  - name: Layer-9
+    uniqueID: 618677063
+    locked: 0
+  - name: Layer-10
+    uniqueID: 181784213
     locked: 0
   m_RenderingLayers:
   - Default
