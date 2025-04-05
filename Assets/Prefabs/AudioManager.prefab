@@ -208,8 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tracks:
-  - trackName: 
-    clip: {fileID: 0}
+  - trackName: CinematicIntroAudio
+    clip: {fileID: 8300000, guid: a3741f5a1182b9945a26307639246470, type: 3}
 --- !u!114 &7407835800244277848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a6106ba2f57224db3f9739d60d32ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicLibrary: {fileID: 0}
-  musicSource: {fileID: 0}
+  musicLibrary: {fileID: 6305550884624381494}
+  musicSource: {fileID: 6641092753452626337}
 --- !u!1 &8735792747604653646
 GameObject:
   m_ObjectHideFlags: 0
