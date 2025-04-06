@@ -35,6 +35,12 @@ public class PlayerMovement : MonoBehaviour
 
         Flip();
 
+        // Duality
+        if(Input.GetMouseButton(1))
+        {
+
+        }
+
         // Set animator variables
         animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.magnitude));
         animator.SetBool("IsGrounded", isGrounded);
@@ -66,4 +72,6 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+    public bool CanAttack() => IsGrounded();
 }
