@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -60,6 +61,12 @@ public class Health : MonoBehaviour
                 foreach (Behaviour component in components)
                 {
                     component.enabled = false;
+
+                    if (component.tag == "Player")
+                    {
+                        
+                        SceneManager.LoadScene("Game Over");
+                    }
                 }
 
                 IsDead = true;
