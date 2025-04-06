@@ -22,10 +22,10 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player") return;
         hit = true;
         boxCollider.enabled = false;
         Deactivate();
+
     }
 
     public void SetDirection(float direction)
