@@ -15,6 +15,7 @@ public class Health : MonoBehaviour
 
     [Header("GeneralComponents")]
     [SerializeField] private Animator animator;
+    [SerializeField] private Behaviour[] components;
 
     private void Awake()
     {
@@ -43,7 +44,6 @@ public class Health : MonoBehaviour
     public void TakeDamage(float damage)
     {
         var tmpHealth = currentHealth - damage;
-
         currentHealth = Mathf.Clamp(tmpHealth, 0, startingHealth);
 
         if (currentHealth > 0)
@@ -56,8 +56,14 @@ public class Health : MonoBehaviour
             if (!IsDead)
             {
                 animator.SetTrigger("Death");
-                GetComponent<PlayerMovement>().enabled = false;
+
+                foreach (Behaviour component in components)
+                {
+                    component.enabled = false;
+                }
+
                 IsDead = true;
+
             }
         }
     }

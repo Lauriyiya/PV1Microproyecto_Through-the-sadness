@@ -47,7 +47,7 @@ public class RangedEnemy : MonoBehaviour
             Patrol();
     }
 
-    private void Patrol ()
+    private void Patrol()
     {
         if (isFacingRight && transform.position.x > rightEdge.position.x)
             Flip();

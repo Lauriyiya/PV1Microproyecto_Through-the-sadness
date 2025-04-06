@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -15,6 +16,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask[] groundLayers;
+
+    [SerializeField] private CinemachineCamera cam1;
+    [SerializeField] private CinemachineCamera cam2;
+
+    private void Awake()
+    {
+        if (cam1 != null)
+            CamaraManager.SwitchCamera(cam1);
+    }
 
     void Update()
     {
@@ -38,7 +48,26 @@ public class PlayerMovement : MonoBehaviour
         // Duality
         if(Input.GetMouseButton(1))
         {
-
+            if (transform.position.y >= 0f)
+            {
+                
+                transform.position = new Vector3(
+                    transform.position.x,
+                    transform.position.y - 40,
+                    transform.position.z
+                    );
+                CamaraManager.SwitchCamera(cam2);
+            }
+            else
+            {
+                
+                transform.position = new Vector3(
+                    transform.position.x,
+                    transform.position.y + 40,
+                    transform.position.z
+                    );
+                CamaraManager.SwitchCamera(cam1);
+            }
         }
 
         // Set animator variables

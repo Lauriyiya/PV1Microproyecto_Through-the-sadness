@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [Header("Attack")]
+    [SerializeField] private float damage;
     [SerializeField] private float attackCooldown;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] bullets;
@@ -26,9 +27,14 @@ public class PlayerAttack : MonoBehaviour
     {
         animator.SetTrigger("Attack"); 
         cooldownTimer = 0;
-        
-        bullets[FindBullets()].transform.position = firePoint.position;
-        bullets[FindBullets()].GetComponent<Projectile>()
+
+        var bulletId = FindBullets();
+        bullets[bulletId].transform.position = firePoint.position;
+        bullets[bulletId]
+            .GetComponent<Projectile>()
+            .SetDamage(damage);
+        bullets[bulletId]
+            .GetComponent<Projectile>()
             .SetDirection(Mathf.Sign(transform.localScale.x));
     }
 

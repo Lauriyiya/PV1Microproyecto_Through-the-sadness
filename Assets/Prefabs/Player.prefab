@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfc82aa9e95a4e44f9535fc79b92453f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   attackCooldown: 1
   firePoint: {fileID: 750691347797718421}
   bullets: []
@@ -310,6 +311,9 @@ MonoBehaviour:
   numberOfFlashes: 3
   spriteRenderer: {fileID: 5970650887707981106}
   animator: {fileID: 1898002815351025706}
+  components:
+  - {fileID: 8984332548809321366}
+  - {fileID: 8169788711132618058}
 --- !u!1 &4283559254345624704
 GameObject:
   m_ObjectHideFlags: 0

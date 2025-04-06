@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private float damage;
     [SerializeField] private float speed;
     private float direction;
     private bool hit;
@@ -24,8 +25,15 @@ public class Projectile : MonoBehaviour
     {
         hit = true;
         boxCollider.enabled = false;
-        Deactivate();
+        if (collision.tag == "Enemy")
+            collision.GetComponent<Health>().TakeDamage(damage);
 
+        Deactivate();
+    }
+
+    public void SetDamage(float damage)
+    { 
+        this.damage = damage; 
     }
 
     public void SetDirection(float direction)
